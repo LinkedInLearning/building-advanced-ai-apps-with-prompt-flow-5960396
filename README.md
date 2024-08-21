@@ -1,7 +1,6 @@
 # Building Advanced AI Apps with Prompt Flow
 This is the repository for the LinkedIn Learning course `Building Advanced AI Apps with Prompt Flow`. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
 ## Instructions
 You have two options to follow along with the course:
 1. Build your own Prompt Flow from scratch and using the files in `./example-files/.`
