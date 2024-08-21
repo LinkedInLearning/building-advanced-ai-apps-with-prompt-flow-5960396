@@ -1,14 +1,42 @@
 {
-  "extensions": [
-    "GitHub.github-vscode-theme",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "ritwickdey.LiveServer",
-    "stylelint.vscode-stylelint"
-    // Additional Extensions Here
+  "name": "Promptflow-Python312",
+  // "context" is the path that the Codespaces docker build command should be run from, relative to devcontainer.json
+  "context": ".",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "-v",
+    "/var/run/docker.sock:/var/run/docker.sock"
   ],
+  "remoteEnv": {
+    "HOST_PROJECT_PATH": "${localWorkspaceFolder}"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "GitHub.github-vscode-theme",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "mechatroner.rainbow-csv",
+        "prompt-flow.prompt-flow"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {}
+  },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
-  "postAttachCommand": "git pull --all"  
+  "postAttachCommand": "git pull --all"
 }
-
-// DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference

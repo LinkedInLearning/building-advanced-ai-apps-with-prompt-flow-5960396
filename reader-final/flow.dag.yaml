@@ -1,0 +1,103 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  chat_history:
+    type: list
+    is_chat_history: true
+    default: []
+    is_chat_input: false
+  question:
+    type: string
+    is_chat_input: true
+    is_chat_history: false
+    default: "how does water evaporate? "
+outputs:
+  answer:
+    type: string
+    reference: ${output_response.output}
+    is_chat_output: true
+nodes:
+- name: question_classifier
+  type: llm
+  source:
+    type: code
+    path: question_classifier.jinja2
+  inputs:
+    model: gpt-3.5-turbo
+    temperature: 0
+    max_tokens: 100
+    query: ${inputs.question}
+  connection: flow_reader_openai
+  api: chat
+- name: chat
+  type: llm
+  source:
+    type: code
+    path: chat.jinja2
+  inputs:
+    deployment_name: gpt-35-turbo
+    max_tokens: 256
+    temperature: 0.7
+    model: gpt-3.5-turbo
+    chat_history: ${inputs.chat_history}
+    question: ${inputs.question}
+    article: ${retrieve_cached_article.output.text}
+  connection: flow_reader_openai
+  api: chat
+  activate:
+    when: ${retrieve_cached_article.output.chat_status}
+    is: true
+- name: extract_url
+  type: python
+  source:
+    type: code
+    path: extract_url.py
+  inputs:
+    text: ${inputs.question}
+  activate:
+    when: ${question_classifier.output}
+    is: url_query
+  aggregation: false
+- name: article_scraper
+  type: python
+  source:
+    type: code
+    path: article_scraper.py
+  inputs:
+    url: ${extract_url.output}
+- name: article_simplified
+  type: llm
+  source:
+    type: code
+    path: article_simplified.jinja2
+  inputs:
+    temperature: 0.7
+    max_tokens: 400
+    model: gpt-4
+    question: ${article_scraper.output}
+  connection: flow_reader_openai
+  api: chat
+- name: cache_article
+  type: python
+  source:
+    type: code
+    path: cache_article.py
+  inputs:
+    article_text: ${article_simplified.output}
+- name: output_response
+  type: python
+  source:
+    type: code
+    path: output_response.py
+  inputs:
+    chat: ${chat.output}
+    cached_article: ${retrieve_cached_article.output}
+- name: retrieve_cached_article
+  type: python
+  source:
+    type: code
+    path: retrieve_cached_article.py
+  inputs:
+    article_text: ${cache_article.output}
+    classifier: ${question_classifier.output}

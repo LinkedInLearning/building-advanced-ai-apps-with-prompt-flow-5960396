@@ -1,0 +1,7 @@
+beautifulsoup4
+keyrings.alt
+mistralai
+promptflow
+promptflow-tools
+python-dotenv
+requests
