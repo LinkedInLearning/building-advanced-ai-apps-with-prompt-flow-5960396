@@ -1,6 +1,10 @@
 # Building Advanced AI Apps with Prompt Flow
 This is the repository for the LinkedIn Learning course `Building Advanced AI Apps with Prompt Flow`. The full course is available from [LinkedIn Learning][lil-course-url].
 
+![lil-thumbnail-url]
+
+
+
 ## Instructions
 You have two options to follow along with the course:
 1. Build your own Prompt Flow from scratch and using the files in `./example-files/.`
@@ -22,6 +26,15 @@ To run the course examples you need an [OpenAI API](https://platform.openai.com)
 
 Information on how to set up the necessary connections is covered in the course and can also be found in [reader-final/README.md](reader-final/README.md).
 
+### Instructor
+
+Morten Rand-Hendriksen
+
+Senior Staff Instructor, Speaker, Web Designer, and Software Developer
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/morten-rand-hendriksen?u=104).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
