@@ -26,7 +26,7 @@ To run the course examples you need an [OpenAI API](https://platform.openai.com)
 
 Information on how to set up the necessary connections is covered in the course and can also be found in [reader-final/README.md](reader-final/README.md).
 
-### Instructor
+## Instructor
 
 Morten Rand-Hendriksen
 
