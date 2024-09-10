@@ -3,7 +3,7 @@ This is the repository for the LinkedIn Learning course `Building Advanced AI Ap
 
 ![lil-thumbnail-url]
 
-
+In this course, Senior Staff Instructor Morten Rand-Hendriksen guides you through developing LLM-based AI apps using the open-source Prompt Flow suite. Get hands-on practice creating, analyzing, and evaluating workflows that link LLMs, prompts, and Python code. With real-world examples and practical insights, Morten helps you master prompt engineering, streamlining development, and getting started orchestrating advanced AI projects.
 
 ## Instructions
 You have two options to follow along with the course:
@@ -38,6 +38,6 @@ Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learn
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+[lil-course-url]: https://www.linkedin.com/learning/building-advanced-ai-apps-with-prompt-flow
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQExNG2lNvBx4w/learning-public-crop_675_1200/learning-public-crop_675_1200/0/1725923613752?e=2147483647&v=beta&t=nk1c-pI0r5FVcxlr3NRBIkp72xeSqzWSQuGdS5q7TT0
 
