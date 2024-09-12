@@ -1,9 +1,9 @@
-# Building Advanced AI Apps with Prompt Flow
-This is the repository for the LinkedIn Learning course `Building Advanced AI Apps with Prompt Flow`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Prompt Flow: Hands-On
+This is the repository for the LinkedIn Learning course `Prompt Flow: Hands-On`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![lil-thumbnail-url]
 
-In this course, Senior Staff Instructor Morten Rand-Hendriksen guides you through developing LLM-based AI apps using the open-source Prompt Flow suite. Get hands-on practice creating, analyzing, and evaluating workflows that link LLMs, prompts, and Python code. With real-world examples and practical insights, Morten helps you master prompt engineering, streamlining development, and getting started orchestrating advanced AI projects.
+In this course, Senior Staff Instructor Morten Rand-Hendriksen guides you through hands-on practice creating, analyzing, and evaluating workflows that link LLMs, prompts, and Python code. With real-world examples and practical insights, Morten helps you master prompt engineering, streamlining development, and getting started orchestrating advanced AI projects.
 
 ## Instructions
 You have two options to follow along with the course:
@@ -38,6 +38,6 @@ Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learn
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/building-advanced-ai-apps-with-prompt-flow
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQExNG2lNvBx4w/learning-public-crop_675_1200/learning-public-crop_675_1200/0/1725923613752?e=2147483647&v=beta&t=nk1c-pI0r5FVcxlr3NRBIkp72xeSqzWSQuGdS5q7TT0
+[lil-course-url]: https://www.linkedin.com/learning/prompt-flow-hands-on
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQHw2NiAd5Dv1Q/learning-public-crop_675_1200/learning-public-crop_675_1200/0/1726091509509?e=2147483647&v=beta&t=qejXiqejNWRCKW5DOiOTM-oHg6dSs6w3HEVMYq64L4I
 
